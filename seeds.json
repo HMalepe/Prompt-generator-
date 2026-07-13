@@ -1,0 +1,19 @@
+{
+  "_comment": "Level-1 categories. Add rows to reach 102+. family drives the meta-prompt; outcome + seed steer expansion.",
+  "categories": [
+    { "id": "websites",             "family": "web_build",   "outcome": "a complete deployable website/template", "seed": "Funky" },
+    { "id": "landing-pages",        "family": "web_build",   "outcome": "a high-converting landing page",         "seed": "Bold SaaS Waitlist" },
+    { "id": "ecommerce-stores",     "family": "web_build",   "outcome": "a styled online store",                  "seed": "Minimal Boutique" },
+    { "id": "fiction-books",        "family": "fiction",     "outcome": "a complete fiction manuscript",          "seed": "Slow-Burn Romantasy" },
+    { "id": "nonfiction-books",     "family": "nonfiction",  "outcome": "a credible how-to book",                 "seed": "90-Day Transformation" },
+    { "id": "low-content-books",    "family": "low_content", "outcome": "a print-ready KDP interior",             "seed": "Guided Gratitude Journal" },
+    { "id": "email-sequences",      "family": "marketing",   "outcome": "an automated email sequence",            "seed": "Abandoned-Cart Recovery" },
+    { "id": "youtube-scripts",      "family": "video",       "outcome": "retention scripts + thumbnails",         "seed": "Faceless True-Crime" },
+    { "id": "logo-branding",        "family": "visual",      "outcome": "brand-identity concepts",                "seed": "Quiet Luxury" },
+    { "id": "pitch-decks",          "family": "business",    "outcome": "a fundraising pitch deck",               "seed": "Seed-Round Story" },
+    { "id": "test-prep",            "family": "education",   "outcome": "a test-prep question bank + strategy",   "seed": "Licensing-Exam Drills" },
+    { "id": "music-songwriting",    "family": "music",       "outcome": "finished lyrics + AI-audio prompts",     "seed": "Melodic Trap" },
+    { "id": "workout-plans",        "family": "wellness",    "outcome": "a progressive training program",         "seed": "No-Equipment Home" },
+    { "id": "automation-scripts",   "family": "code_tech",   "outcome": "a working automation tool",              "seed": "Inbox-to-Sheet Bot" }
+  ]
+}
