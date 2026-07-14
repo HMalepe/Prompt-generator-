@@ -1,0 +1,94 @@
+{
+  "category": "websites",
+  "subcategory": "Mock Variant 1",
+  "leaf": "Mock Variant 1",
+  "one_liner": "a distinct angle buyers choose",
+  "difficulty": "beginner",
+  "prompt_count": 12,
+  "prompts": [
+    {
+      "step": 1,
+      "goal": "mock step 1",
+      "prompt": "MOCK long prompt 1. MOCK long prompt 1. MOCK long prompt 1. MOCK long prompt 1. MOCK long prompt 1. MOCK long prompt 1. MOCK long prompt 1. MOCK long prompt 1. MOCK long prompt 1. MOCK long prompt 1. MOCK long prompt 1. MOCK long prompt 1. MOCK long prompt 1. MOCK long prompt 1. MOCK long prompt 1. MOCK long prompt 1. MOCK long prompt 1. MOCK long prompt 1. MOCK long prompt 1. MOCK long prompt 1. ",
+      "fill_in": "nothing",
+      "expected": "a usable result"
+    },
+    {
+      "step": 2,
+      "goal": "mock step 2",
+      "prompt": "MOCK long prompt 2. MOCK long prompt 2. MOCK long prompt 2. MOCK long prompt 2. MOCK long prompt 2. MOCK long prompt 2. MOCK long prompt 2. MOCK long prompt 2. MOCK long prompt 2. MOCK long prompt 2. MOCK long prompt 2. MOCK long prompt 2. MOCK long prompt 2. MOCK long prompt 2. MOCK long prompt 2. MOCK long prompt 2. MOCK long prompt 2. MOCK long prompt 2. MOCK long prompt 2. MOCK long prompt 2. ",
+      "fill_in": "nothing",
+      "expected": "a usable result"
+    },
+    {
+      "step": 3,
+      "goal": "mock step 3",
+      "prompt": "MOCK long prompt 3. MOCK long prompt 3. MOCK long prompt 3. MOCK long prompt 3. MOCK long prompt 3. MOCK long prompt 3. MOCK long prompt 3. MOCK long prompt 3. MOCK long prompt 3. MOCK long prompt 3. MOCK long prompt 3. MOCK long prompt 3. MOCK long prompt 3. MOCK long prompt 3. MOCK long prompt 3. MOCK long prompt 3. MOCK long prompt 3. MOCK long prompt 3. MOCK long prompt 3. MOCK long prompt 3. ",
+      "fill_in": "nothing",
+      "expected": "a usable result"
+    },
+    {
+      "step": 4,
+      "goal": "mock step 4",
+      "prompt": "MOCK long prompt 4. MOCK long prompt 4. MOCK long prompt 4. MOCK long prompt 4. MOCK long prompt 4. MOCK long prompt 4. MOCK long prompt 4. MOCK long prompt 4. MOCK long prompt 4. MOCK long prompt 4. MOCK long prompt 4. MOCK long prompt 4. MOCK long prompt 4. MOCK long prompt 4. MOCK long prompt 4. MOCK long prompt 4. MOCK long prompt 4. MOCK long prompt 4. MOCK long prompt 4. MOCK long prompt 4. ",
+      "fill_in": "nothing",
+      "expected": "a usable result"
+    },
+    {
+      "step": 5,
+      "goal": "mock step 5",
+      "prompt": "MOCK long prompt 5. MOCK long prompt 5. MOCK long prompt 5. MOCK long prompt 5. MOCK long prompt 5. MOCK long prompt 5. MOCK long prompt 5. MOCK long prompt 5. MOCK long prompt 5. MOCK long prompt 5. MOCK long prompt 5. MOCK long prompt 5. MOCK long prompt 5. MOCK long prompt 5. MOCK long prompt 5. MOCK long prompt 5. MOCK long prompt 5. MOCK long prompt 5. MOCK long prompt 5. MOCK long prompt 5. ",
+      "fill_in": "nothing",
+      "expected": "a usable result"
+    },
+    {
+      "step": 6,
+      "goal": "mock step 6",
+      "prompt": "MOCK long prompt 6. MOCK long prompt 6. MOCK long prompt 6. MOCK long prompt 6. MOCK long prompt 6. MOCK long prompt 6. MOCK long prompt 6. MOCK long prompt 6. MOCK long prompt 6. MOCK long prompt 6. MOCK long prompt 6. MOCK long prompt 6. MOCK long prompt 6. MOCK long prompt 6. MOCK long prompt 6. MOCK long prompt 6. MOCK long prompt 6. MOCK long prompt 6. MOCK long prompt 6. MOCK long prompt 6. ",
+      "fill_in": "nothing",
+      "expected": "a usable result"
+    },
+    {
+      "step": 7,
+      "goal": "mock step 7",
+      "prompt": "MOCK long prompt 7. MOCK long prompt 7. MOCK long prompt 7. MOCK long prompt 7. MOCK long prompt 7. MOCK long prompt 7. MOCK long prompt 7. MOCK long prompt 7. MOCK long prompt 7. MOCK long prompt 7. MOCK long prompt 7. MOCK long prompt 7. MOCK long prompt 7. MOCK long prompt 7. MOCK long prompt 7. MOCK long prompt 7. MOCK long prompt 7. MOCK long prompt 7. MOCK long prompt 7. MOCK long prompt 7. ",
+      "fill_in": "nothing",
+      "expected": "a usable result"
+    },
+    {
+      "step": 8,
+      "goal": "mock step 8",
+      "prompt": "MOCK long prompt 8. MOCK long prompt 8. MOCK long prompt 8. MOCK long prompt 8. MOCK long prompt 8. MOCK long prompt 8. MOCK long prompt 8. MOCK long prompt 8. MOCK long prompt 8. MOCK long prompt 8. MOCK long prompt 8. MOCK long prompt 8. MOCK long prompt 8. MOCK long prompt 8. MOCK long prompt 8. MOCK long prompt 8. MOCK long prompt 8. MOCK long prompt 8. MOCK long prompt 8. MOCK long prompt 8. ",
+      "fill_in": "nothing",
+      "expected": "a usable result"
+    },
+    {
+      "step": 9,
+      "goal": "mock step 9",
+      "prompt": "MOCK long prompt 9. MOCK long prompt 9. MOCK long prompt 9. MOCK long prompt 9. MOCK long prompt 9. MOCK long prompt 9. MOCK long prompt 9. MOCK long prompt 9. MOCK long prompt 9. MOCK long prompt 9. MOCK long prompt 9. MOCK long prompt 9. MOCK long prompt 9. MOCK long prompt 9. MOCK long prompt 9. MOCK long prompt 9. MOCK long prompt 9. MOCK long prompt 9. MOCK long prompt 9. MOCK long prompt 9. ",
+      "fill_in": "nothing",
+      "expected": "a usable result"
+    },
+    {
+      "step": 10,
+      "goal": "mock step 10",
+      "prompt": "MOCK long prompt 10. MOCK long prompt 10. MOCK long prompt 10. MOCK long prompt 10. MOCK long prompt 10. MOCK long prompt 10. MOCK long prompt 10. MOCK long prompt 10. MOCK long prompt 10. MOCK long prompt 10. MOCK long prompt 10. MOCK long prompt 10. MOCK long prompt 10. MOCK long prompt 10. MOCK long prompt 10. MOCK long prompt 10. MOCK long prompt 10. MOCK long prompt 10. MOCK long prompt 10. MOCK long prompt 10. ",
+      "fill_in": "nothing",
+      "expected": "a usable result"
+    },
+    {
+      "step": 11,
+      "goal": "mock step 11",
+      "prompt": "MOCK long prompt 11. MOCK long prompt 11. MOCK long prompt 11. MOCK long prompt 11. MOCK long prompt 11. MOCK long prompt 11. MOCK long prompt 11. MOCK long prompt 11. MOCK long prompt 11. MOCK long prompt 11. MOCK long prompt 11. MOCK long prompt 11. MOCK long prompt 11. MOCK long prompt 11. MOCK long prompt 11. MOCK long prompt 11. MOCK long prompt 11. MOCK long prompt 11. MOCK long prompt 11. MOCK long prompt 11. ",
+      "fill_in": "nothing",
+      "expected": "a usable result"
+    },
+    {
+      "step": 12,
+      "goal": "mock step 12",
+      "prompt": "MOCK long prompt 12. MOCK long prompt 12. MOCK long prompt 12. MOCK long prompt 12. MOCK long prompt 12. MOCK long prompt 12. MOCK long prompt 12. MOCK long prompt 12. MOCK long prompt 12. MOCK long prompt 12. MOCK long prompt 12. MOCK long prompt 12. MOCK long prompt 12. MOCK long prompt 12. MOCK long prompt 12. MOCK long prompt 12. MOCK long prompt 12. MOCK long prompt 12. MOCK long prompt 12. MOCK long prompt 12. ",
+      "fill_in": "nothing",
+      "expected": "a usable result"
+    }
+  ]
+}

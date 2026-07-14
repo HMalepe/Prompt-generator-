@@ -6,8 +6,9 @@ sellable Word document, then a PDF.
   python export_docx.py --json library/builds/<STAMP>/websites/<sub>/<leaf>.json
   python export_docx.py --json <leaf.json> --no-pdf      # Word only
 
-Word is the source of truth; PDF is rendered from it via LibreOffice (clean,
-identical layout). Output lands next to the .json as <leaf>.docx / <leaf>.pdf.
+Word is the source of truth; PDF is rendered via LibreOffice when available,
+or Microsoft Word COM on Windows as a fallback. Output lands next to the
+.json as <leaf>.docx / <leaf>.pdf.
 
 The docx skill recommends docx-js; python-docx is used here to keep the toolchain
 single-language (pip only). Output is verified by rendering to PDF and viewing.
@@ -94,14 +95,37 @@ def build(data, out_docx):
     d.save(out_docx)
     return out_docx
 
+def to_pdf_word(docx_path):
+    """Convert via Microsoft Word COM (Windows). No pywin32 required."""
+    import sys
+    if sys.platform != "win32":
+        return None
+    docx = Path(docx_path).resolve()
+    pdf = docx.with_suffix(".pdf")
+    ps = (
+        f'$docx = "{docx}"; $pdf = "{pdf}"; '
+        "$w = New-Object -ComObject Word.Application; $w.Visible = $false; "
+        "try { $d = $w.Documents.Open($docx); $d.SaveAs([ref]$pdf, [ref]17); $d.Close() } "
+        "finally { $w.Quit() }"
+    )
+    r = subprocess.run(
+        ["powershell", "-NoProfile", "-Command", ps],
+        capture_output=True, text=True,
+    )
+    return pdf if r.returncode == 0 and pdf.exists() else None
+
 def to_pdf(docx_path):
     soffice = shutil.which("soffice") or shutil.which("libreoffice")
-    if not soffice:
-        print("LibreOffice not found — skipping PDF. Install it or use --no-pdf."); return None
-    subprocess.run([soffice,"--headless","--convert-to","pdf","--outdir",
-                    str(Path(docx_path).parent), str(docx_path)], check=True,
-                   stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-    return Path(docx_path).with_suffix(".pdf")
+    if soffice:
+        subprocess.run([soffice, "--headless", "--convert-to", "pdf", "--outdir",
+                        str(Path(docx_path).parent), str(docx_path)], check=True,
+                       stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        return Path(docx_path).with_suffix(".pdf")
+    pdf = to_pdf_word(docx_path)
+    if pdf:
+        return pdf
+    print("No PDF converter found — install LibreOffice or Microsoft Word, or use --no-pdf.")
+    return None
 
 def main():
     ap = argparse.ArgumentParser()

@@ -1,0 +1,25 @@
+{
+  "build": "2026-07-14T19-30-41Z",
+  "generated": "2026-07-14T19:30:41.720895+00:00",
+  "mode": "mock",
+  "config": {
+    "category": "websites",
+    "subs": 2,
+    "subsubs": 2,
+    "leaf_prompts": 50,
+    "sub_prompts": 24,
+    "cat_prompts": 12,
+    "chunk": 10,
+    "concurrency": 4,
+    "model": "claude-sonnet-4-6",
+    "mx": 6000,
+    "mock": true
+  },
+  "categories": {
+    "websites": [
+      "Mock Variant 1",
+      "Mock Variant 2"
+    ]
+  },
+  "total_prompts": 260
+}
