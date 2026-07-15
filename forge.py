@@ -106,7 +106,7 @@ async def gen_prompts(client, cfg, *, level, family, category, outcome,
     while len(items) < target:
         n = min(chunk, target-len(items))
         p = F.prompts(level, family=family, category=category, subcategory=subcategory,
-                      leaf=leaf, outcome=outcome, start=start, count=n, lens=lens())
+                      leaf=leaf, outcome=outcome, start=start, count=n, lens=lens(), total=target)
         raw = await backoff(lambda: client.complete(p, max_tokens=mx))
         got = [x for x in parse_arr(raw) if x.get("prompt")]
         if not got: break
