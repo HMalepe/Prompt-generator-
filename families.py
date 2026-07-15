@@ -26,13 +26,15 @@ FAMILY = {
 
 # ── the premium bar (applied to every generation prompt) ────────────────────
 PREMIUM = ("PREMIUM BAR (non-negotiable — this is what people pay real money for):\n"
-           "- Encode specific EXPERT methodology in every prompt: named frameworks, industry "
-           "techniques, concrete parameters and numbers — not generic instructions. The buyer "
-           "is paying for expertise baked into the prompt, not for the instruction itself.\n"
+           "- Encode specific EXPERT methodology the buyer would NOT know to ask for: named "
+           "frameworks, industry techniques, concrete parameters and numbers, and the non-obvious "
+           "pro moves a novice would skip. The buyer pays for expertise baked into the SEQUENCE, "
+           "not for the instruction itself.\n"
            "- BAN filler language: never write 'make it engaging / professional / high-quality / "
            "compelling' without specifying, concretely, exactly what that means and how to do it.\n"
-           "- ZERO overlap: if a step could merge with an adjacent step, it is filler — replace it "
-           "with something that materially advances the build.\n"
+           "- ZERO overlap: each step must introduce a capability, decision, or asset absent from "
+           "EVERY prior step — not just the one before it. If step N could merge with an earlier "
+           "step, it is filler; replace it with something that materially advances the build.\n"
            "- Each prompt must produce output the buyer could NOT easily get from a one-line "
            "question to the AI. The ordered sequence plus embedded expertise IS the product.")
 
