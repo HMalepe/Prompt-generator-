@@ -103,10 +103,13 @@ def parse_arr(txt):
 async def gen_prompts(client, cfg, *, level, family, category, outcome,
                       subcategory=None, leaf=None, target, chunk, mx):
     items, start = [], 1
+    one_lens = lens()   # pin ONE lens per set so aesthetic + tech stack stay coherent across chunks
     while len(items) < target:
         n = min(chunk, target-len(items))
+        prior = [(x["step"], x.get("goal","")) for x in items]
         p = F.prompts(level, family=family, category=category, subcategory=subcategory,
-                      leaf=leaf, outcome=outcome, start=start, count=n, lens=lens(), total=target)
+                      leaf=leaf, outcome=outcome, start=start, count=n, lens=one_lens,
+                      total=target, prior_steps=prior)
         raw = await backoff(lambda: client.complete(p, max_tokens=mx))
         got = [x for x in parse_arr(raw) if x.get("prompt")]
         if not got: break

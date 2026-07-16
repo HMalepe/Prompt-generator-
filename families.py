@@ -59,7 +59,7 @@ Exactly {n} items."""
 
 # ── prompt generation (chunked) ────────────────────────────────────────────
 def prompts(level, *, family, category, subcategory=None, leaf=None,
-            outcome, start, count, lens, total=None):
+            outcome, start, count, lens, total=None, prior_steps=None):
     directive = FAMILY[family]
     end = start + count - 1
     arc = ""
@@ -91,6 +91,12 @@ def prompts(level, *, family, category, subcategory=None, leaf=None,
                        "deliver advanced technique, differentiation, edge-case handling, polish, conversion/monetization, "
                        "and reusable variations — the material that justifies a premium price. Every one must teach the "
                        "buyer something they could not get from a one-line question to the AI.")
+    continuity = ""
+    if prior_steps:
+        listed = "\n".join(f"  {s}. {g}" for s, g in prior_steps)
+        continuity = ("STEPS ALREADY WRITTEN — do NOT repeat, re-introduce, or rebuild any of these. "
+                      "Continue the SAME build from where they leave off, in the exact same tech stack, "
+                      "file structure, and aesthetic already established above:\n" + listed + "\n\n")
     return f"""You are a top-tier practitioner writing part of a PREMIUM prompt-pack people pay real money for.
 FAMILY FOCUS: {directive}
 The buyer pastes these prompts, in order, into an AI tool to build {outcome}.
@@ -99,7 +105,7 @@ CREATIVE LENS for this batch: "{lens}" — flavor tone and aesthetic only; never
 {PREMIUM}
 
 Write {scope}{arc}
-Produce build prompts numbered {start}..{start+count-1}, in strict build order, each cumulative (later builds on earlier).
+{continuity}Produce build prompts numbered {start}..{start+count-1}, in strict build order, each cumulative (later builds on earlier).
 {long}
 Where the buyer inserts their own info use [SQUARE_LABELS].
 
