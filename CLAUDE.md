@@ -5,7 +5,8 @@ Project memory for Claude Code. Read this fully at the start of every session.
 ## What this is
 An internal content-production tool. One command forges a fresh tree of AI prompts
 and writes it to a new **dated build**. Old builds are never overwritten. Leaves are
-sellable products: 50+ long, detailed, copy-paste prompts. Any leaf exports to a
+sellable products: premium, zero-filler, copy-paste prompts (length is set per family
+in seeds.json — the model self-stops at the coherent count and never pads). Any leaf exports to a
 polished Word + PDF to sell.
 
 ## Golden rule
@@ -21,7 +22,7 @@ library/builds/<TIMESTAMP>/
     _category.json            ~12 foundational prompts for the whole category
     <subcategory>/
       _subcategory.json       ~24 prompts for that style/angle
-      <sub-subcategory>.json  50+ LONG build prompts  ← the product
+      <sub-subcategory>.json  premium zero-filler prompts (count per family)  ← the product
   manifest.json               tree + total prompt count
 library/LATEST.txt            points at newest build
 ```
@@ -57,7 +58,7 @@ Tuning flags on `build`: `--subs --subsubs --leaf-prompts --sub-prompts
 --cat-prompts --chunk --concurrency --max-tokens --model`.
 
 ## Cost reality — respect it before any real run
-Real content = real API calls. ~50 leaf prompts ÷ chunk(10) = 5 calls per leaf.
+Real content = real API calls. ~28 leaf prompts ÷ chunk(10) ≈ 3 calls per leaf.
 Default fan-out (8 subs × 5 subsubs = 40 leaves) ≈ a few hundred calls per category:
 minutes and real dollars. `--all` across 100+ categories is thousands of calls.
 Before running anything LIVE that isn't a single category, tell me the estimated

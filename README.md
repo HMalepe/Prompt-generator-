@@ -12,7 +12,7 @@ library/builds/<TIMESTAMP>/
     _category.json                 12 foundational prompts for the whole category
     <subcategory>/
       _subcategory.json            24 prompts for that style/angle
-      <sub-subcategory>.json       50+ LONG, detailed build prompts  ← the product
+      <sub-subcategory>.json       premium zero-filler build prompts (count per family)  ← the product
   manifest.json                    tree + total prompt count
 library/LATEST.txt                 points at newest build
 ```
@@ -32,8 +32,8 @@ python forge.py list                               # every dated build + counts
 python forge.py list-categories                    # the seed categories
 ```
 
-At default fan-out (`--subs 8 --subsubs 5 --leaf-prompts 50`) one category build is
-~40 leaves × 50 + sub/category prompts ≈ **2,300 prompts per press**. Old builds stay,
+At default fan-out (`--subs 8 --subsubs 5`) with per-family leaf counts (~28 for websites)
+one category build is ~40 leaves × ~28 + sub/category prompts ≈ **~1,300 prompts per press**. Old builds stay,
 so you get a dated version history automatically.
 
 Tune per run: `--subs --subsubs --leaf-prompts --sub-prompts --cat-prompts
@@ -53,7 +53,7 @@ prompt as a numbered STEP with a shaded "PASTE THIS" box, Fill-in and Expected l
 
 ## Reality check on cost/scale
 
-Real content = real API calls: ~50 leaf prompts ÷ chunk(10) = 5 calls per leaf, so a
+Real content = real API calls: ~28 leaf prompts ÷ chunk(10) ≈ 3 calls per leaf, so a
 default category build is a few hundred calls — minutes and real dollars, not seconds.
 `--all` across 100+ categories is thousands of calls; run it deliberately, ideally one
 category at a time. The build resumes if interrupted (checkpoint per build), so nothing

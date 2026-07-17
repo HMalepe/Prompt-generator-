@@ -156,7 +156,7 @@ async def build_category(client, cfg, cat, build_dir, sem, ck, progress):
             if not _pending(ck,"leaf",cat["id"],sname,lname): continue
             lp = await guarded(gen_prompts(client, cfg, level="leaf", family=fam,
                         category=cat["id"], subcategory=sname, leaf=lname, outcome=outcome,
-                        target=cfg["leaf_prompts"], chunk=cfg["chunk"], mx=cfg["mx"]))
+                        target=cat.get("leaf_prompts", cfg["leaf_prompts"]), chunk=cfg["chunk"], mx=cfg["mx"]))
             _write(sdir/f"{slug(lname)}.json",
                    {"category":cat["id"],"subcategory":sname,"leaf":lname,
                     "one_liner":leaf.get("one_liner",""),"difficulty":leaf.get("difficulty",""),
@@ -242,7 +242,8 @@ def main():
     b.add_argument("--all", action="store_true")
     b.add_argument("--subs", type=int, default=8)
     b.add_argument("--subsubs", type=int, default=5)
-    b.add_argument("--leaf-prompts", type=int, default=50)
+    b.add_argument("--leaf-prompts", type=int, default=30,
+                   help="fallback ceiling when a category has no leaf_prompts in seeds.json; the model self-stops at the coherent length")
     b.add_argument("--sub-prompts", type=int, default=24)
     b.add_argument("--cat-prompts", type=int, default=12)
     b.add_argument("--chunk", type=int, default=10, help="prompts per API call")
