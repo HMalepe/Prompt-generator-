@@ -1,0 +1,7 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "installCommand": "echo 'Prompt Forge is a Python CLI — no npm install needed'",
+  "buildCommand": "echo 'No build step — this repo is a Python CLI, see README.md'",
+  "outputDirectory": "public"
+}
